@@ -33,7 +33,7 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args){
 
-        User mario = new User("Mario","Bro","email@asfas.com","adress 1", "address line 2", "g68 3BB", "Scotland" );
+        User mario = new User("Mario","Bro","email@asfas.com","address 1", "address line 2", "g68 3BB", "Scotland" );
         userRepository.save(mario);
 
         Hat plumber = new Hat("Plumber","hat1",mario);
@@ -48,7 +48,13 @@ public class DataLoader implements ApplicationRunner {
         Client client2 = new Client("Iain", "McCall", "iain@yahoo.com", "Down the road", "Glasgow", "G32 6TH", "UK", 40.00, plumber);
         clientRepository.save(client2);
 
-//        Job job1 = new Job("Unblocking sink", "Getting the shite out", "Lots of shite", client1,)
+        Job job1 = new Job("Unblocking sink", "Getting the shite out", "Lots of shite", client1, "2021/02/15 10:15", "2021/02/15 11:15", false, false);
+        jobRepository.save(job1);
+
+        Job job2 = new Job("Unblocking toilet", "Getting the toilet paper out", "Tough job", client2, "2021/02/18 09:15", "2021/02/18 10:15", true, true);
+        jobRepository.save(job2);
+
+
     }
 
 

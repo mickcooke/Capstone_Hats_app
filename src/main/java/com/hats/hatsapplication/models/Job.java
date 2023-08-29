@@ -30,8 +30,8 @@ public class Job {
     @Column(name="ended")
     private LocalDateTime ended;
 
-    @Column(name= "timeTaken")
-    private List<Integer> timeTaken;
+//    @Column(name= "time_taken")
+//    private List<Integer> timeTaken;
 
     @Column(name= "completed")
     private Boolean completed;
@@ -44,14 +44,14 @@ public class Job {
     @JoinColumn(name="client_id", nullable = false)
     private Client client;
 
-    public Job(String name, String description, String notes, Client client, LocalDateTime started, LocalDateTime ended,  Boolean completed, Boolean paid) {
+    public Job(String name, String description, String notes, Client client, String started, String ended,  Boolean completed, Boolean paid) {
         this.name = name;
         this.description = description;
         this.notes = notes;
         this.client = client;
-        this.started = null;
-        this.ended = null;
-        this.timeTaken = new ArrayList<Integer>();
+        this.started = this.formatTimeInput(started);
+        this.ended = this.formatTimeInput(ended);
+//        this.timeTaken = new ArrayList<Integer>();
         this.completed = completed;
         this.paid = paid;
 
@@ -116,13 +116,13 @@ public class Job {
         this.ended = ended;
     }
 
-    public List<Integer> getTimeTaken() {
-        return timeTaken;
-    }
-
-    public void setTimeTaken(List<Integer> timeTaken) {
-        this.timeTaken = timeTaken;
-    }
+//    public List<Integer> getTimeTaken() {
+//        return timeTaken;
+//    }
+//
+//    public void setTimeTaken(List<Integer> timeTaken) {
+//        this.timeTaken = timeTaken;
+//    }
 
     public Boolean getCompleted() {
         return completed;
@@ -138,5 +138,16 @@ public class Job {
 
     public void setPaid(Boolean paid) {
         this.paid = paid;
+    }
+
+    public LocalDateTime formatTimeInput(String givenTime) {
+        String[] splitString = givenTime.split("[/ :]");
+        LocalDateTime newDateTime =  LocalDateTime.of(
+                Integer.parseInt(splitString[0]),
+                Integer.parseInt(splitString[1]),
+                Integer.parseInt(splitString[2]),
+                Integer.parseInt(splitString[3]),
+                Integer.parseInt(splitString[4]));
+        return newDateTime;
     }
 }

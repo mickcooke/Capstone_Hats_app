@@ -17,13 +17,16 @@ public class Hat {
     @Column(name="icon_name")
     private String iconName;
 
-    @JsonIgnoreProperties({"hats"})
-    @OneToMany(mappedBy="hats")
-    private List<Client> clients;
+
     @JsonIgnoreProperties({"hats"})
     @ManyToOne
     @JoinColumn(name="user_id", nullable = false)
     private User user;
+
+    @JsonIgnoreProperties({"hat"})
+    @OneToMany(mappedBy="hat")
+    private List<Client> clients;
+
 
     public Hat(String name, String iconName, User user) {
         this.name = name;
