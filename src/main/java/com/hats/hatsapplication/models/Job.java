@@ -30,8 +30,8 @@ public class Job {
     @Column(name="ended")
     private LocalDateTime ended;
 
-//    @Column(name= "time_taken")
-//    private List<Integer> timeTaken;
+    @Column(name= "time_taken")
+    private int timeTaken;
 
     @Column(name= "completed")
     private Boolean completed;
@@ -51,7 +51,7 @@ public class Job {
         this.client = client;
         this.started = this.formatTimeInput(started);
         this.ended = this.formatTimeInput(ended);
-//        this.timeTaken = new ArrayList<Integer>();
+        this.timeTaken = 0;
         this.completed = completed;
         this.paid = paid;
 
@@ -116,13 +116,13 @@ public class Job {
         this.ended = ended;
     }
 
-//    public List<Integer> getTimeTaken() {
-//        return timeTaken;
-//    }
-//
-//    public void setTimeTaken(List<Integer> timeTaken) {
-//        this.timeTaken = timeTaken;
-//    }
+    public int getTimeTaken() {
+        return timeTaken;
+    }
+
+    public void setTimeTaken(int timeTaken) {
+        this.timeTaken = timeTaken;
+    }
 
     public Boolean getCompleted() {
         return completed;
