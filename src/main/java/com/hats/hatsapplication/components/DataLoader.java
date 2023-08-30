@@ -33,7 +33,7 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args){
 
-        User mario = new User("Mario","Bro","email@asfas.com","address 1", "address line 2", "g68 3BB", "Scotland" );
+        User mario = new User("Mario","Bro Merge Test","email@asfas.com","address 1", "address line 2", "g68 3BB", "Scotland" );
         userRepository.save(mario);
 
         Hat plumber = new Hat("Plumber","hat1",mario);
