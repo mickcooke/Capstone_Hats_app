@@ -22,6 +22,26 @@ public class JobController {
         return new ResponseEntity<>(jobRepository.findAll(), HttpStatus.OK);
     }
 
+    @GetMapping(value = "/jobs/paid")
+    public ResponseEntity<List<Job>> getPaidJobs(){
+        return new ResponseEntity<>(jobRepository.findByPaidTrue(), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/jobs/unpaid")
+    public ResponseEntity<List<Job>> getUnpaidJobs(){
+        return new ResponseEntity<>(jobRepository.findByPaidFalse(), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/jobs/ongoing")
+    public ResponseEntity<List<Job>> getOngoingJobs(@RequestParam(name="hat", required = false) Long id){
+        if (id != null){
+            List<Job> foundJobs = jobRepository.findByCompletedFalseAndClientHatId(id);
+            return new ResponseEntity<>(foundJobs, HttpStatus.OK);
+        }
+
+        return new ResponseEntity<>(jobRepository.findByCompletedFalse(), HttpStatus.OK);
+    }
+
     @GetMapping(value = "/jobs/{id}")
     public ResponseEntity getJob(@PathVariable Long id){
         return new ResponseEntity<>(jobRepository.findById(id), HttpStatus.OK);
