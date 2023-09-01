@@ -11,4 +11,6 @@ import java.util.List;
 public interface ClientRepository extends JpaRepository<Client, Long> {
     List<Client> findClientByFirstName(String firstName);
 
+    List<Client> findClientsByHatId(Long id);
+
 }

@@ -48,11 +48,18 @@ public class DataLoader implements ApplicationRunner {
         Client client2 = new Client("Iain", "McCall", "iain@yahoo.com", "Down the road", "Glasgow", "G32 6TH", "UK", 40.00, plumber);
         clientRepository.save(client2);
 
+        Client client3 = new Client("Princess", "Peach", "princess@peach.com", "Big Castle", "Mushroom Kingdom", "SM32", "Marioland", 120.00, driver);
+        clientRepository.save(client3);
+
         Job job1 = new Job("Unblocking sink", "Getting the shite out", "Lots of shite", client1, "2021/02/15 10:15", "2021/02/15 11:15", false, false);
         jobRepository.save(job1);
 
         Job job2 = new Job("Unblocking toilet", "Getting the toilet paper out", "Tough job", client2, "2021/02/18 09:15", "2021/02/18 10:15", true, true);
         jobRepository.save(job2);
+
+        Job job3 = new Job("Mario Kart race", "Driving really fast", "Vroom", client3, "2023/05/20 20:15", "2023/05/20 21:15", false, false);
+        jobRepository.save(job3);
+
 
 
     }
