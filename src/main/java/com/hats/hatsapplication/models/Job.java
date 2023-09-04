@@ -33,6 +33,9 @@ public class Job {
     @Column(name= "time_taken")
     private int timeTaken;
 
+    @Column(name= "active")
+    private Boolean active;
+
     @Column(name= "completed")
     private Boolean completed;
 
@@ -44,7 +47,7 @@ public class Job {
     @JoinColumn(name="client_id", nullable = false)
     private Client client;
 
-    public Job(String name, String description, String notes, Client client, String started, String ended,  Boolean completed, Boolean paid) {
+    public Job(String name, String description, String notes, Client client, String started, String ended, Boolean active, Boolean completed, Boolean paid) {
         this.name = name;
         this.description = description;
         this.notes = notes;
@@ -52,9 +55,18 @@ public class Job {
         this.started = this.formatTimeInput(started);
         this.ended = this.formatTimeInput(ended);
         this.timeTaken = 0;
+        this.active = active;
         this.completed = completed;
         this.paid = paid;
 
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 
     public Job() {

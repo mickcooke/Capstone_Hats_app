@@ -31,6 +31,9 @@ public class Client {
     @Column(name="country")
     private String country;
 
+    @Column(name= "notes")
+    private String notes;
+
     @Column(name= "hourlyRate")
     private Double hourlyRate;
 
@@ -43,7 +46,7 @@ public class Client {
     @OneToMany(mappedBy = "client")
     private List<Job> jobs;
 
-    public Client(String firstName, String lastName, String emailAddress, String address1, String address2, String postcode, String country, Double hourlyRate, Hat hat) {
+    public Client(String firstName, String lastName, String emailAddress, String address1, String address2, String postcode, String country, String notes, Double hourlyRate, Hat hat) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailAddress = emailAddress;
@@ -51,6 +54,7 @@ public class Client {
         this.address2 = address2;
         this.postcode = postcode;
         this.country = country;
+        this.notes = notes;
         this.hourlyRate = hourlyRate;
         this.hat = hat;
         this.jobs = new ArrayList<Job>();
