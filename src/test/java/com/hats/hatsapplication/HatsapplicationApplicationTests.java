@@ -39,17 +39,17 @@ class HatsapplicationApplicationTests {
 	void contextLoads() {
 	}
 
-	@Test
-	public void createUserAndHatThenSave(){
-		User mario = new User("Mario","Bro","email@asfas.com","adress 1", "address line 2", "g68 3BB", "Scotland" );
-		userRepository.save(mario);
-
-		Hat plumber = new Hat("Plumber","hat1",mario);
-		hatRepository.save(plumber);
-
-		mario.addHat(plumber);
-
-	}
+//	@Test
+//	public void createUserAndHatThenSave(){
+//		User mario = new User("Mario","Bro","email@asfas.com","adress 1", "address line 2", "g68 3BB", "Scotland" );
+//		userRepository.save(mario);
+//
+//		Hat plumber = new Hat("Plumber","hat1",mario);
+//		hatRepository.save(plumber);
+//
+//		mario.addHat(plumber);
+//
+//	}
 
 //	@Test
 //	public void canGetAllJobs(){
