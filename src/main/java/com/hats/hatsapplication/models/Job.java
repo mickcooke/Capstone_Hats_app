@@ -33,7 +33,7 @@ public class Job {
     @Column(name= "time_taken")
     private int timeTaken;
 
-    @Column(name= "active")
+    @Column(name="active")
     private Boolean active;
 
     @Column(name= "completed")
@@ -61,13 +61,7 @@ public class Job {
 
     }
 
-    public Boolean getActive() {
-        return active;
-    }
 
-    public void setActive(Boolean active) {
-        this.active = active;
-    }
 
     public Job() {
     }
@@ -136,6 +130,15 @@ public class Job {
         this.timeTaken = timeTaken;
     }
 
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+
     public Boolean getCompleted() {
         return completed;
     }
@@ -153,13 +156,16 @@ public class Job {
     }
 
     public LocalDateTime formatTimeInput(String givenTime) {
-        String[] splitString = givenTime.split("[/ :]");
-        LocalDateTime newDateTime =  LocalDateTime.of(
-                Integer.parseInt(splitString[0]),
-                Integer.parseInt(splitString[1]),
-                Integer.parseInt(splitString[2]),
-                Integer.parseInt(splitString[3]),
-                Integer.parseInt(splitString[4]));
-        return newDateTime;
+        if (givenTime != null ) {
+            String[] splitString = givenTime.split("[/ :]");
+            LocalDateTime newDateTime = LocalDateTime.of(
+                    Integer.parseInt(splitString[0]),
+                    Integer.parseInt(splitString[1]),
+                    Integer.parseInt(splitString[2]),
+                    Integer.parseInt(splitString[3]),
+                    Integer.parseInt(splitString[4]));
+            return newDateTime;
+        }
+        return null;
     }
 }

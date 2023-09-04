@@ -31,7 +31,7 @@ public class Client {
     @Column(name="country")
     private String country;
 
-    @Column(name= "notes")
+    @Column(name="notes")
     private String notes;
 
     @Column(name= "hourlyRate")
@@ -125,6 +125,14 @@ public class Client {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 
     public Double getHourlyRate() {
