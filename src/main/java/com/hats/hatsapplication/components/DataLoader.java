@@ -162,19 +162,19 @@ public class DataLoader implements ApplicationRunner {
         Job job16 = new Job("Shower drain cleaning", "Clearing shower drain", "Drain maintenance", client2, "2023/10/18 10:15", null, true, false, false);
         jobRepository.save(job16);
 
-        Job job17 = new Job("Mario Kart race", "Rainbow Road", "Oh shit", client3, "2023/05/20 20:15", "2023/05/20 21:15", false, true, false);
+        Job job17 = new Job("Mario Kart race", "Rainbow Road", "Oh shit", client11, "2023/05/20 20:15", "2023/05/20 21:15", false, true, false);
         jobRepository.save(job17);
 
-        Job job18 = new Job("Airport pickup", "Picking up from the airport", "Airport transfer", client1, "2023/10/25 14:00", null, true, false, false);
+        Job job18 = new Job("Airport pickup", "Picking up from the airport", "Airport transfer", client10, "2023/10/25 14:00", null, true, false, false);
         jobRepository.save(job18);
 
-        Job job19 = new Job("Shopping trip", "Driving to the mall", "Shopping transportation", client1, "2023/10/28 11:30", null, true, false, false);
+        Job job19 = new Job("Shopping trip", "Driving to the mall", "Shopping transportation", client12, "2023/10/28 11:30", null, true, false, false);
         jobRepository.save(job19);
 
-        Job job20 = new Job("Business meeting", "Providing transportation for a meeting", "Business transportation", client2, "2023/11/02 09:00", null, true, false, false);
+        Job job20 = new Job("Business meeting", "Providing transportation for a meeting", "Business transportation", client12, "2023/11/02 09:00", null, true, false, false);
         jobRepository.save(job20);
 
-        Job job21 = new Job("Restaurant reservation", "Driving to a fancy dinner", "Dining transportation", client2, "2023/11/05 19:15", null, true, false, false);
+        Job job21 = new Job("Restaurant reservation", "Driving to a fancy dinner", "Dining transportation", client12, "2023/11/05 19:15", null, true, false, false);
         jobRepository.save(job21);
 
         Job job22 = new Job("Medical checkup", "Routine health examination", "Healthcare services", client15, "2023/11/10 09:30", null, true, false, false);
