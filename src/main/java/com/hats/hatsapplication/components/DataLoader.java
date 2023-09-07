@@ -120,10 +120,10 @@ public class DataLoader implements ApplicationRunner {
 //        Job job2 = new Job("Unblocking toilet", "Getting the toilet paper out", "Tough job", client2, "2021/02/18 09:15", "2021/02/18 10:15", false, true, true);
 //        jobRepository.save(job2);
 
-        Job job3 = new Job("Fixing a leaky tap", "Repairing a dripping tap", "Mixer tap", client5, "2023/08/23 11:30", "2023/08/23 12:00", true, true, false, 30);
+        Job job3 = new Job("Fixing a leaky tap", "Repairing a dripping tap", "Mixer tap", client5, "2023/08/23 11:30", "2023/08/23 12:00", true, true, false, 1800);
         jobRepository.save(job3);
 
-        Job job4 = new Job("Replacing a damaged pipe", "Fixing a burst pipe", "Pipe replacement", client4, "2023/09/07 10:00", null, true, false, false, 75);
+        Job job4 = new Job("Replacing a damaged pipe", "Fixing a burst pipe", "Pipe replacement", client4, "2023/09/07 10:00", null, true, false, false, 4500);
         jobRepository.save(job4);
 
 //        Job job5 = new Job("Toilet installation", "Setting up a new toilet", "Toilet plumbing", client5, "2023/09/20 10:45", null, true, false, false);
@@ -135,7 +135,7 @@ public class DataLoader implements ApplicationRunner {
 //        Job job7 = new Job("Shower drain cleaning", "Clearing shower blockage", "Drain maintenance", client7, "2023/09/25 16:30", null, true, false, false);
 //        jobRepository.save(job7);
 
-        Job job8 = new Job("Driving to Harrods", "", "Remember champagne!", client8, "2023/07/28 09:30", "2023/07/28 13:30", true, true, true, 240);
+        Job job8 = new Job("Driving to Harrods", "", "Remember champagne!", client8, "2023/07/28 09:30", "2023/07/28 13:30", true, true, true, 14400);
         jobRepository.save(job8);
 
 //        Job job9 = new Job("Emergency plumbing", "Handling plumbing emergencies", "Plumbing crisis", client9, "2023/10/01 08:00", null, true, false, false);
@@ -144,7 +144,7 @@ public class DataLoader implements ApplicationRunner {
 //        Job job10 = new Job("Checking for water leaks", "Detecting hidden leaks", "Leak inspection", client10, "2023/10/03 12:45", null, true, false, false);
 //        jobRepository.save(job10);
 
-        Job job11 = new Job("Installing a new kitchen sink", "Upgrading kitchen plumbing", "Kitchen renovation", client4, "2023/10/05 15:30", "2023/10/05 16:30", true, true, true, 60);
+        Job job11 = new Job("Installing a new kitchen sink", "Upgrading kitchen plumbing", "Kitchen renovation", client4, "2023/10/05 15:30", "2023/10/05 16:30", true, true, true, 3600);
         jobRepository.save(job11);
 
 //        Job job12 = new Job("Replacing a shower head", "Shower fixture replacement", "Shower upgrade", client1, "2023/10/08 14:15", null, true, false, false);
@@ -174,13 +174,13 @@ public class DataLoader implements ApplicationRunner {
 //        Job job20 = new Job("Business meeting", "Providing transportation for a meeting", "Business transportation", client12, "2023/11/02 09:00", null, true, false, false);
 //        jobRepository.save(job20);
 //
-        Job job21 = new Job("Restaurant reservation", "Driving to a fancy dinner", "", client3, "2023/11/05 19:15", "2023/11/05 23:15", true, true, false, 240);
+        Job job21 = new Job("Restaurant reservation", "Driving to a fancy dinner", "", client3, "2023/11/05 19:15", "2023/11/05 23:15", true, true, false, 14400);
         jobRepository.save(job21);
 
-        Job job22 = new Job("Medical checkup", "Routine health examination", "Not looking good..", client15, "2023/09/03 09:30", "2023/09/03 09:50", true, true, true, 20);
+        Job job22 = new Job("Medical checkup", "Routine health examination", "Not looking good..", client15, "2023/09/03 09:30", "2023/09/03 09:50", true, true, true, 1200);
         jobRepository.save(job22);
 
-        Job job23 = new Job("Emergency medical assistance", "Urgent medical care", "Emergency services", client15, "2023/09/06 16:45", null, true, false, false, 600);
+        Job job23 = new Job("Emergency medical assistance", "Urgent medical care", "Emergency services", client15, "2023/09/06 16:45", null, true, false, false, 36000);
         jobRepository.save(job23);
 
 //        Job job24 = new Job("Medical consultation", "Medical advice and consultation", "Healthcare services", client16, "2023/11/20 14:00", null, true, false, false);

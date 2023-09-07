@@ -54,7 +54,7 @@ public class Job {
         this.client = client;
         this.started = this.formatTimeInput(started);
         this.ended = this.formatTimeInput(ended);
-        this.timeTaken = 0;
+        this.timeTaken = timeTaken;
         this.active = active;
         this.completed = completed;
         this.paid = paid;
